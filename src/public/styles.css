@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+
+header {
+    text-align: center;
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px; /* Sesuaikan dengan preferensi Anda */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+p {
+    line-height: 1.5;
+}
+
+img {
+    max-width: 30%; /* Mengatur lebar gambar */
+    float: left; /* Menggeser gambar ke kiri */
+    margin: 0 20px 20px 0; /* Memberi margin di sebelah kanan dan bawah gambar */
+}
+
+
+.article {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.comment-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.comment-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#comment-form {
+    margin-top: 10px;
+}
+
+#comment-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#comment-form input,
+#comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#comment-form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#comment-form button:hover {
+    background-color: #2577b5;
+}
+
+.comments {
+    margin-top: 20px;
+}
+
+.comment {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.comment h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.comment p {
+    font-size: 14px;
+}
