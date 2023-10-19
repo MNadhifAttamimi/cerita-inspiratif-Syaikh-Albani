@@ -12,8 +12,14 @@ app.use(express.json());
 app.post('/api/comments', (req, res) => {
   const comment = req.body;
   comments.push(comment);
-  res.json({ message: 'Komentar berhasil disimpan', comment });
+
+  // Kirim pesan sebagai respons
+  res.send('Komentar berhasil disimpan');
+
+  // Alternatif: Anda juga dapat mengirim pesan sebagai JSON
+  // res.json({ message: 'Komentar berhasil disimpan' });
 });
+
 
 // Endpoint API untuk mengambil daftar komentar
 app.get('/api/comments', (req, res) => {

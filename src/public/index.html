@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Cerita Syaikh Al-Albani</title>
 </head>
 <body>
@@ -41,21 +41,25 @@
 <div class="comment-section">
     <h3>Komentar</h3>
     <form id="comment-form">
-    <label for="name">Nama:</label>
-    <input type="text" id="name" name="name" required>
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required>
 
-    <label for="comment">Komentar:</label>
-    <textarea id="comment" name="comment" rows="4" required></textarea>
+        <label for="comment">Komentar:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
 
-    <button type="submit" onclick="submitComment()">Kirim Komentar</button>
-</form>
+        <button type="submit" onclick="submitComment()">Kirim Komentar</button>
+    </form>
 
-    <div class="comments">
-        <!-- Tempat untuk menampilkan komentar yang sudah ada -->
+    <div class="comments" id="comments-list">
+        <!-- Tempat untuk menampilkan daftar komentar -->
     </div>
 </div>
 
+
+
+
     </div>
 </body>
+<script src="script.js"></script>
 </html>
 

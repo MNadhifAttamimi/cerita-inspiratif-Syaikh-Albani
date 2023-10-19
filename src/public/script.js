@@ -1,27 +1,36 @@
+// Fungsi untuk menampilkan daftar komentar dari Local Storage saat halaman dimuat
+function loadComments() {
+    var commentsList = document.getElementById("comments-list");
+    commentsList.innerHTML = ""; // Kosongkan daftar komentar
 
-    function displayComments() {
-    const commentsDiv = document.querySelector('.comments');
+    var comments = JSON.parse(localStorage.getItem("comments")) || [];
 
-    fetch('/api/comments')
-    .then(response => response.json())
-    .then(data => {
-        commentsDiv.innerHTML = ''; // Hapus konten sebelumnya
-        
-        data.forEach(comment => {
-            const commentElement = document.createElement('div');
-    commentElement.className = 'comment';
-    commentElement.innerHTML = `
-    <h4>${comment.name}</h4>
-    <p>${comment.comment}</p>
-    `;
-    commentsDiv.appendChild(commentElement);
-        });
-    })
-    .catch(error => {
-        console.error('Terjadi kesalahan:', error);
-    });
+    for (var i = 0; i < comments.length; i++) {
+        var commentDiv = document.createElement("div");
+        commentDiv.className = "comment";
+        commentDiv.innerHTML = "<strong>" + comments[i].name + ":</strong> " + comments[i].comment;
+        commentsList.appendChild(commentDiv);
+    }
 }
 
-    // Panggil fungsi untuk menampilkan komentar saat halaman dimuat
-    displayComments();
+// Fungsi untuk mengirim komentar
+function submitComment() {
+    // Dapatkan nilai nama dan komentar dari formulir
+    var name = document.getElementById("name").value;
+    var comment = document.getElementById("comment").value;
 
+    // Tambahkan komentar ke daftar komentar di Local Storage
+    var comments = JSON.parse(localStorage.getItem("comments")) || [];
+    comments.push({ name, comment });
+    localStorage.setItem("comments", JSON.stringify(comments));
+
+    // Tampilkan ulang daftar komentar
+    loadComments();
+
+    // Reset formulir
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+}
+
+// Memuat daftar komentar saat halaman dimuat
+loadComments();
